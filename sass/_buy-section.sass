@@ -1,0 +1,89 @@
+.buy-section
+    margin-bottom: 150px
+    & .title
+        margin-bottom: 200px
+        & span
+            color: #E0B3BD
+        &::after
+            background: #E0B3BD
+    &__forms
+        display: flex
+        align-items: center
+        justify-content: space-between
+    &__form
+        border-radius: 40px
+        background: linear-gradient(158deg, #C5AFE0 5.41%, #ACA4E0 93.87%)
+        max-width: 600px
+        padding: 60px 85px 80px
+        font-size: 16px
+    &__order
+        border-radius: 40px
+        background: #FFF
+        box-shadow: 0px 10px 70px 0px rgba(0, 0, 0, 0.10)
+        padding: 70px 58px
+        font-size: 20px
+
+.input-wrapper
+    width: 430px
+    margin-bottom: 42px
+    &__label
+        margin-bottom: 16px
+        & span
+            font-size: 12px
+            color: #fff
+            display: block
+    & input
+        border: none
+        outline: none
+        width: 100%
+        padding: 0 20px
+        height: 55px
+        border-radius: 100px
+        font-size: 16px
+    &.promocode
+        display: flex
+        align-items: baseline
+        justify-content: space-between
+        & .input-wrapper__label
+            text-transform: uppercase
+            margin-right: 33px
+
+.dropdown
+    position: relative
+    &__input
+        position: relative
+        border-radius: 100px
+        background: #FFF
+        display: flex
+        align-items: center
+        padding: 0 20px
+        height: 55px
+    & svg
+        position: absolute
+        top: 22px
+        right: 22px
+        cursor: pointer
+    &__hero
+        position: absolute
+        border-radius: 30px
+        background: #FFF
+        top: calc(100% + 10px)
+        left: 0
+        right: 0
+        opacity: 0
+        pointer-events: none
+        transform: translateY(-10px)
+        transition: opacity .3s ease, transform .3s ease
+    &.open 
+        & .dropdown__hero
+            opacity: 1
+            transform: translateY(0)
+            pointer-events: all
+        & .shevron
+            transform: rotate(180deg)
+    &__item
+        padding: 12px
+        cursor: pointer
+
+.shevron
+    transition: transform .3s ease
