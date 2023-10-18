@@ -1,0 +1,36 @@
+.dropdown
+    position: relative
+    &__input
+        position: relative
+        border-radius: 100px
+        background: #FFF
+        display: flex
+        align-items: center
+        padding: 0 20px
+        height: 55px
+    & svg
+        position: absolute
+        top: 22px
+        right: 22px
+        cursor: pointer
+    &__hero
+        position: absolute
+        border-radius: 30px
+        background: #FFF
+        top: calc(100% + 10px)
+        left: 0
+        right: 0
+        opacity: 0
+        pointer-events: none
+        transform: translateY(-10px)
+        transition: opacity .3s ease, transform .3s ease
+    &.open 
+        & .dropdown__hero
+            opacity: 1
+            transform: translateY(0)
+            pointer-events: all
+        & .shevron
+            transform: rotate(180deg)
+    &__item
+        padding: 12px
+        cursor: pointer

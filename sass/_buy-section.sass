@@ -16,12 +16,16 @@
         max-width: 600px
         padding: 60px 85px 80px
         font-size: 16px
+        margin-bottom: 43px
     &__order
         border-radius: 40px
         background: #FFF
         box-shadow: 0px 10px 70px 0px rgba(0, 0, 0, 0.10)
         padding: 70px 58px
         font-size: 20px
+    &__detail
+        font-size: 16px
+        text-align: center
 
 .input-wrapper
     width: 430px
@@ -48,42 +52,61 @@
             text-transform: uppercase
             margin-right: 33px
 
-.dropdown
-    position: relative
-    &__input
-        position: relative
-        border-radius: 100px
-        background: #FFF
-        display: flex
-        align-items: center
-        padding: 0 20px
-        height: 55px
-    & svg
-        position: absolute
-        top: 22px
-        right: 22px
-        cursor: pointer
-    &__hero
-        position: absolute
-        border-radius: 30px
-        background: #FFF
-        top: calc(100% + 10px)
-        left: 0
-        right: 0
-        opacity: 0
-        pointer-events: none
-        transform: translateY(-10px)
-        transition: opacity .3s ease, transform .3s ease
-    &.open 
-        & .dropdown__hero
-            opacity: 1
-            transform: translateY(0)
-            pointer-events: all
-        & .shevron
-            transform: rotate(180deg)
-    &__item
-        padding: 12px
-        cursor: pointer
-
 .shevron
     transition: transform .3s ease
+
+.order-form
+    max-width: 595px
+    min-width: 595px
+    &__title
+        color: #8981BD
+        font-size: 21px
+        font-family: 'Days One', sans-serif
+        margin-bottom: 50px
+        text-align: center
+    &__item
+        font-size: 20px
+        display: flex
+        margin-bottom: 10px
+    &__text
+        padding-right: 10px
+    &__content
+        flex-grow: 1
+        position: relative
+        &::after
+            content: ''
+            position: absolute
+            left: 0
+            right: 0
+            bottom: 0
+            height: 1px
+            background: #000
+    &__mesure
+        padding-left: 10px
+        min-width: 27px
+    &__summary
+        border-radius: 10px
+        background: linear-gradient(180deg, #C5AFE0 0%, #BBABE0 39.39%, #ACA4E0 100%)
+        margin-bottom: 55px
+        margin-top: 45px
+        display: flex
+        color: #fff
+        width: 100%
+        padding: 16px 40px
+        & .order-form__text
+            font-size: 20px
+            font-weight: 700
+        & .order-form__content::after
+            background: #fff
+            bottom: 5px
+    &__btn
+        width: 280px
+        margin: 0 auto
+        margin-bottom: 28px
+    &__confirm
+        text-align: center
+        font-size: 11px
+        & a
+            color: #000
+            font-weight: 700
+            text-decoration: underline
