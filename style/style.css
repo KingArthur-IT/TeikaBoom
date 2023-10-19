@@ -165,6 +165,9 @@ ul {
 }
 
 @media screen and (max-width: 1024px) {
+  .map-section {
+    margin-bottom: 160px;
+  }
   .map-section__hero {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
@@ -183,6 +186,9 @@ ul {
 }
 
 @media screen and (max-width: 600px) {
+  .map-section {
+    margin-bottom: 120px;
+  }
   .map-section .title span {
     display: block;
   }
@@ -251,6 +257,7 @@ ul {
   width: 80%;
   height: 72%;
   background: url("../assets/girl.png") no-repeat;
+  background-size: cover;
   z-index: -1;
 }
 
@@ -276,7 +283,7 @@ ul {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  z-index: 100;
+  z-index: 10;
 }
 
 .buy-section__form {
@@ -337,6 +344,7 @@ ul {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+  margin-bottom: 0;
 }
 
 .input-wrapper.promocode .input-wrapper__label {
@@ -379,6 +387,7 @@ ul {
   font-family: 'Days One', sans-serif;
   margin-bottom: 50px;
   text-align: center;
+  font-weight: 600;
 }
 
 .order-form__item {
@@ -456,6 +465,169 @@ ul {
   text-decoration: underline;
 }
 
+@media screen and (max-width: 1440px) {
+  .buy-section::before {
+    -webkit-transform: translate(0%, -120%);
+            transform: translate(0%, -120%);
+  }
+  .buy-section::after {
+    right: 0;
+    top: 120px;
+    width: 80vw;
+    height: 72vw;
+  }
+  .order-form {
+    max-width: 430px;
+    min-width: 430px;
+  }
+}
+
+@media screen and (max-width: 1200px) {
+  .buy-section__form {
+    padding: 40px 40px 50px;
+  }
+  .buy-section__order {
+    padding: 60px 40px;
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  .buy-section::before {
+    -webkit-transform: translate(0%, -160%);
+            transform: translate(0%, -160%);
+  }
+  .buy-section::after {
+    display: none;
+  }
+  .buy-section .title {
+    margin-bottom: 90px;
+  }
+  .buy-section__forms {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .buy-section__form-wrapper {
+    margin-bottom: 50px;
+    width: 100%;
+  }
+  .buy-section__form {
+    width: 100%;
+    max-width: 700px;
+    margin: 0 auto;
+    margin-bottom: 30px;
+  }
+  .buy-section__order {
+    padding: 40px 50px;
+  }
+  .input-wrapper {
+    width: 100%;
+    margin-bottom: 30px;
+  }
+  .order-form {
+    max-width: 500px;
+    min-width: 500px;
+  }
+  .order-form::before {
+    -webkit-transform: rotate(33deg) translate(20%, -60%);
+            transform: rotate(33deg) translate(20%, -60%);
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .buy-section {
+    margin-bottom: 100px;
+  }
+  .buy-section::before {
+    display: none;
+  }
+  .buy-section .title {
+    margin-bottom: 50px;
+  }
+  .buy-section__form {
+    padding: 20px 50px 30px;
+    font-size: 14px;
+    margin-bottom: 24px;
+  }
+  .buy-section__order {
+    padding: 27px 40px;
+    font-size: 14px;
+  }
+  .buy-section__detail {
+    font-size: 14px;
+    text-align: center;
+    max-width: 240px;
+    margin: 0 auto;
+  }
+  .input-wrapper {
+    margin-bottom: 21px;
+  }
+  .input-wrapper__label {
+    margin-bottom: 6px;
+  }
+  .input-wrapper input {
+    padding: 0 20px;
+    height: 32px;
+    font-size: 14px;
+  }
+  .input-wrapper.promocode .input-wrapper__label {
+    margin-right: 30px;
+  }
+  .order-form {
+    max-width: 400px;
+    min-width: 400px;
+  }
+  .order-form::before {
+    display: none;
+  }
+  .order-form__title {
+    font-size: 16px;
+    margin-bottom: 20px;
+  }
+  .order-form__item {
+    font-size: 14px;
+    margin-bottom: 5px;
+  }
+  .order-form__text {
+    padding-right: 10px;
+  }
+  .order-form__mesure {
+    padding-left: 10px;
+    min-width: 27px;
+  }
+  .order-form__summary {
+    margin-bottom: 30px;
+    margin-top: 25px;
+    padding: 10px 30px;
+  }
+  .order-form__summary .order-form__text {
+    font-size: 14px;
+  }
+  .order-form__summary .order-form__content::after {
+    bottom: 5px;
+  }
+  .order-form__btn {
+    width: 200px;
+    margin: 0 auto;
+    margin-bottom: 20px;
+  }
+  .order-form__confirm {
+    font-size: 11px;
+    width: calc(100% + 14px);
+    -webkit-transform: translateX(-7px);
+            transform: translateX(-7px);
+  }
+}
+
+@media screen and (max-width: 425px) {
+  .order-form {
+    max-width: auto;
+    min-width: auto;
+    width: 100%;
+  }
+}
+
 .dropdown {
   position: relative;
 }
@@ -513,6 +685,21 @@ ul {
 .dropdown__item {
   padding: 12px;
   cursor: pointer;
+}
+
+@media screen and (max-width: 425px) {
+  .dropdown__input {
+    height: 32px;
+  }
+  .dropdown svg {
+    position: absolute;
+    width: 10px;
+    top: 12px;
+    right: 13px;
+  }
+  .dropdown__item {
+    padding: 12px;
+  }
 }
 
 .relax {
@@ -789,6 +976,7 @@ ul {
 .main {
   padding-top: 140px;
   padding-bottom: 140px;
+  overflow-x: hidden;
 }
 
 .title {
