@@ -1,5 +1,26 @@
 .relax
-    margin-bottom: 180px
+    margin-bottom: 180px 
+    position: relative
+    &::before
+        content: ''
+        position: absolute
+        right: 30%
+        top: -240px
+        width: 73px
+        height: 70px
+        background: url('../assets/boxes/blue.png') no-repeat
+        background-size: cover
+        transform: rotate(-32deg)
+    &::after
+        content: ''
+        position: absolute
+        right: -30px
+        top: -60px
+        width: 112px
+        height: 108px
+        background: url('../assets/boxes/violet.png') no-repeat
+        background-size: cover
+        transform: rotate(42deg)
     & .title
         margin-bottom: 200px
         & span

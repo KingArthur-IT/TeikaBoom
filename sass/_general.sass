@@ -37,3 +37,21 @@ ul
     text-transform: uppercase
     padding: 18px
     background: linear-gradient(90deg, #FFCF00 0%, #FFEB01 105.54%)
+    letter-spacing: 0.98px
+    &::before
+        content: ''
+        position: absolute
+        left: 0
+        right: 0
+        top: 0
+        bottom: 0
+        box-shadow: 2px 5px 10px 0px #FFCF00B3
+        border-radius: 100px
+        opacity: 0
+        transform: translate(-2px, -5px)
+        z-index: -1
+        transition: opacity .5s ease, transform .3s ease
+    &:hover::before
+        opacity: 1
+        transform: translate(0px, 0px)
+        

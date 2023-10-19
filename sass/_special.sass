@@ -1,7 +1,19 @@
 .special
-    max-width: 1200px
-    margin: 0 auto
     margin-bottom: 215px
+    position: relative
+    &::before
+        content: ''
+        position: absolute
+        left: -30px
+        top: -125px
+        width: 60px
+        height: 52px
+        background: url('../assets/boxes/dark-pink.png') no-repeat
+        background-size: cover
+        transform: rotate(-40deg)
+    &__container
+        max-width: 1200px
+        margin: 0 auto
     & .title
         margin-bottom: 200px
         & span
@@ -19,6 +31,7 @@
         border-radius: 40px
         box-shadow: 0px 10px 60px 0px rgba(0, 0, 0, 0.10)
         padding: 40px 40px 50px
+        background: #fff
     &__img
         width: 100%
         margin-bottom: 55px
@@ -38,3 +51,18 @@
     &__btn
         width: 178px
         margin: 0 auto
+
+.special-gift
+    position: relative
+    &::before
+        content: ''
+        position: absolute
+        right: 0px
+        top: 0px
+        width: 240px
+        height: 212px
+        background: url('../assets/boxes/light-pink.png') no-repeat
+        background-size: cover
+        transform: rotate(34deg) translate(60%, -20%)
+        filter: blur(50px)
+        z-index: -1
