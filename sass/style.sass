@@ -37,3 +37,37 @@
 		left: 50%
 		transform: translateX(-50%)
 		background: #8671A5
+
+.d-none
+	display: none
+
+@media screen and (max-width: 1024px)
+	.main
+		padding-top: 120px
+		padding-bottom: 120px
+	.title
+		font-size: 36px
+		&::before
+			bottom: -28px
+		&::after
+			bottom: -28px
+
+@media screen and (max-width: 600px)
+	.title
+		font-size: 32px
+		&::before
+			width: 300px
+
+@media screen and (max-width: 425px)
+	.main
+		padding-top: 80px
+		padding-bottom: 90px
+	.title
+		font-size: 24px
+		&::before
+			width: 200px
+			bottom: -22px
+		&::after
+			width: 80px
+			height: 2px
+			bottom: -22px
