@@ -71,7 +71,6 @@ ul {
   opacity: 0;
   -webkit-transform: translate(-2px, -5px);
           transform: translate(-2px, -5px);
-  z-index: -1;
   -webkit-transition: opacity .5s ease, -webkit-transform .3s ease;
   transition: opacity .5s ease, -webkit-transform .3s ease;
   transition: opacity .5s ease, transform .3s ease;
@@ -82,6 +81,10 @@ ul {
   opacity: 1;
   -webkit-transform: translate(0px, 0px);
           transform: translate(0px, 0px);
+}
+
+a.btn-primary {
+  color: #000;
 }
 
 @media screen and (max-width: 600px) {
@@ -546,7 +549,7 @@ ul {
     margin-bottom: 50px;
   }
   .buy-section__form {
-    padding: 20px 50px 30px;
+    padding: 20px 40px 30px;
     font-size: 14px;
     margin-bottom: 24px;
   }
@@ -568,7 +571,7 @@ ul {
   }
   .input-wrapper input {
     padding: 0 20px;
-    height: 32px;
+    height: 40px;
     font-size: 14px;
   }
   .input-wrapper.promocode .input-wrapper__label {
@@ -630,6 +633,7 @@ ul {
 
 .dropdown {
   position: relative;
+  cursor: pointer;
 }
 
 .dropdown__input {
@@ -644,6 +648,10 @@ ul {
           align-items: center;
   padding: 0 20px;
   height: 55px;
+}
+
+.dropdown__value {
+  padding-right: 30px;
 }
 
 .dropdown svg {
@@ -668,6 +676,7 @@ ul {
   transition: opacity .3s ease, -webkit-transform .3s ease;
   transition: opacity .3s ease, transform .3s ease;
   transition: opacity .3s ease, transform .3s ease, -webkit-transform .3s ease;
+  z-index: 10;
 }
 
 .dropdown.open .dropdown__hero {
@@ -685,11 +694,20 @@ ul {
 .dropdown__item {
   padding: 12px;
   cursor: pointer;
+  -webkit-transition: background .3s ease;
+  transition: background .3s ease;
+}
+
+.dropdown__item:hover {
+  background: #C5AFE099;
 }
 
 @media screen and (max-width: 425px) {
   .dropdown__input {
-    height: 32px;
+    height: 40px;
+  }
+  .dropdown__value {
+    font-size: 12px;
   }
   .dropdown svg {
     position: absolute;

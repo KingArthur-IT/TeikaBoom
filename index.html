@@ -29,27 +29,30 @@
                         <li><span>→</span> Аниматоры и шоу-программы</li>
                         <li><span>→</span> Тематические комнаты для праздников</li>
                     </ul>
-                    <button class="btn btn-primary map-section__btn">КУПИТЬ БИЛЕТ</button>
+                    <a href="#buy-section" class="btn btn-primary map-section__btn">КУПИТЬ БИЛЕТ</a>
                 </div>
             </div>
         </section>
-        <section class="section buy-section">
+        <section id="buy-section" class="section buy-section">
             <div class="title"><span>Заполните поля,</span> чтобы приобрести билет:</div>
             <div class="buy-section__forms">
                 <div class="buy-section__form-wrapper">
                     <div class="buy-section__form">
                         <div class="input-wrapper">
                             <div class="input-wrapper__label">Выберите парк</div>
-                            <div class="dropdown">
+                            <div id="park" class="dropdown">
                                 <div class="dropdown__input">
+                                    <div class="dropdown__value"></div>
                                     <svg class="shevron" width="17" height="10" viewBox="0 0 17 10" fill="none" xmlns="http://www.w3.org/2000/svg">
                                         <path d="M16.8316 0.540706C16.587 0.185676 16.2603 0.0020404 15.8333 0.0020404C14.6545 0.0020404 13.4757 0.0020404 12.2969 0.0020404C12.2568 0.0020404 12.2188 0.0020404 12.1646 0.0020404C9.66675 0.0020404 7.16887 0 4.67099 0C3.49823 0 2.32748 0 1.15472 0C0.753774 0 0.429009 0.161192 0.228538 0.518262C0.130307 0.693736 0.0882076 0.897776 0.0200472 1.08753C0.014033 1.1059 0.00801887 1.12426 0 1.14262V1.40788C0.0661557 1.77515 0.286675 2.03836 0.535259 2.29341C2.87877 4.71128 5.21828 7.13528 7.55578 9.55723C7.77429 9.78372 8.02889 9.92859 8.33561 9.98368C8.34564 9.98572 8.35366 9.99388 8.36168 9.99796H8.60224C8.69446 9.97143 8.78868 9.94695 8.87889 9.9143C9.06734 9.84697 9.23172 9.73883 9.37205 9.59192C11.7617 7.11692 14.1533 4.63987 16.5489 2.16486C16.7855 1.92002 16.9479 1.64048 16.988 1.29361C16.99 1.28545 16.996 1.27525 17.002 1.26709V1.00184C16.9739 0.836564 16.9278 0.683534 16.8316 0.540706Z" fill="#A892C1"/>
                                     </svg>                                
                                 </div>
                                 <div class="dropdown__hero">
-                                    <div class="dropdown__item">123</div>
-                                    <div class="dropdown__item">123</div>
-                                    <div class="dropdown__item">123</div>
+                                    <div class="dropdown__item">ТЦ «Метрополис», г.Москва, Ленинградское шоссе, 16а, стр.4, метро «Войковская»</div>
+                                    <div class="dropdown__item">ТРЦ «Ривьера», г.Москва, ул. Автозаводская, 18, метро «Тульская»,«Автозаводская»</div>
+                                    <div class="dropdown__item">ТРЦ «Саларис», г.Москва, 23 км Киевского шоссе, 1, метро: «Саларьево»</div>
+                                    <div class="dropdown__item">ТРЦ Крокус Сити Молл, г.Москва, ул. Международная, 8, метро: «Мякинино»</div>
+                                    <div class="dropdown__item">ТРК «Вегас» Каширское, г. Москва, 24 км МКАД</div>
                                 </div>
                             </div>
                         </div>
@@ -62,16 +65,18 @@
                         </div>
                         <div class="input-wrapper">
                             <div class="input-wrapper__label">Выберите тариф для посещения парка</div>
-                            <div class="dropdown">
+                            <div id="tariff" class="dropdown">
                                 <div class="dropdown__input">
+                                    <div class="dropdown__value"></div>
                                     <svg class="shevron" width="17" height="10" viewBox="0 0 17 10" fill="none" xmlns="http://www.w3.org/2000/svg">
                                         <path d="M16.8316 0.540706C16.587 0.185676 16.2603 0.0020404 15.8333 0.0020404C14.6545 0.0020404 13.4757 0.0020404 12.2969 0.0020404C12.2568 0.0020404 12.2188 0.0020404 12.1646 0.0020404C9.66675 0.0020404 7.16887 0 4.67099 0C3.49823 0 2.32748 0 1.15472 0C0.753774 0 0.429009 0.161192 0.228538 0.518262C0.130307 0.693736 0.0882076 0.897776 0.0200472 1.08753C0.014033 1.1059 0.00801887 1.12426 0 1.14262V1.40788C0.0661557 1.77515 0.286675 2.03836 0.535259 2.29341C2.87877 4.71128 5.21828 7.13528 7.55578 9.55723C7.77429 9.78372 8.02889 9.92859 8.33561 9.98368C8.34564 9.98572 8.35366 9.99388 8.36168 9.99796H8.60224C8.69446 9.97143 8.78868 9.94695 8.87889 9.9143C9.06734 9.84697 9.23172 9.73883 9.37205 9.59192C11.7617 7.11692 14.1533 4.63987 16.5489 2.16486C16.7855 1.92002 16.9479 1.64048 16.988 1.29361C16.99 1.28545 16.996 1.27525 17.002 1.26709V1.00184C16.9739 0.836564 16.9278 0.683534 16.8316 0.540706Z" fill="#A892C1"/>
                                     </svg>                                
                                 </div>
                                 <div class="dropdown__hero">
-                                    <div class="dropdown__item">123</div>
-                                    <div class="dropdown__item">123</div>
-                                    <div class="dropdown__item">123</div>
+                                    <div class="dropdown__item">1100 ₽ (Посещение парка в будние дни: Пн-Чт)</div>
+                                    <div class="dropdown__item">1200 ₽ (Посещение парка в пятницу)</div>
+                                    <div class="dropdown__item">1700 ₽ (Посещение парка в выходные и праздничные дни)</div>
+                                    <div class="dropdown__item">2350 ₽ Вечеринка Halloween 27/10/2023</div>
                                 </div>
                             </div>
                         </div>
@@ -203,5 +208,6 @@
             </form>
         </section>
     </main>
+    <script src="./script/main.js"></script>
 </body>
 </html>
