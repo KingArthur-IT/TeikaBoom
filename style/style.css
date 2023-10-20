@@ -91,6 +91,10 @@ a.btn-primary {
   overflow: hidden;
 }
 
+.d-none {
+  display: none;
+}
+
 @media screen and (max-width: 600px) {
   .container {
     padding: 0 30px;
@@ -332,6 +336,10 @@ a.btn-primary {
   display: block;
 }
 
+.input-wrapper__label.invalid {
+  color: red;
+}
+
 .input-wrapper input {
   border: none;
   outline: none;
@@ -427,6 +435,16 @@ a.btn-primary {
   background: #000;
 }
 
+.order-form__content.filled {
+  -webkit-box-flex: 0;
+      -ms-flex-positive: 0;
+          flex-grow: 0;
+}
+
+.order-form__content.filled::after {
+  display: none;
+}
+
 .order-form__mesure {
   padding-left: 10px;
   min-width: 27px;
@@ -436,7 +454,6 @@ a.btn-primary {
   border-radius: 10px;
   background: -webkit-gradient(linear, left top, left bottom, from(#C5AFE0), color-stop(39.39%, #BBABE0), to(#ACA4E0));
   background: linear-gradient(180deg, #C5AFE0 0%, #BBABE0 39.39%, #ACA4E0 100%);
-  margin-bottom: 55px;
   margin-top: 45px;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -460,6 +477,7 @@ a.btn-primary {
   width: 280px;
   margin: 0 auto;
   margin-bottom: 28px;
+  margin-top: 55px;
 }
 
 .order-form__confirm {
@@ -605,7 +623,6 @@ a.btn-primary {
     min-width: 27px;
   }
   .order-form__summary {
-    margin-bottom: 30px;
     margin-top: 25px;
     padding: 10px 30px;
   }
@@ -619,6 +636,7 @@ a.btn-primary {
     width: 200px;
     margin: 0 auto;
     margin-bottom: 20px;
+    margin-top: 30px;
   }
   .order-form__confirm {
     font-size: 11px;
@@ -1939,6 +1957,7 @@ a.btn-primary {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  max-width: 1068px;
 }
 
 .modal-contact__title {

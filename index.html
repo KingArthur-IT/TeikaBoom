@@ -49,14 +49,14 @@
                                 </div>
                                 <div class="dropdown__hero">
                                     <div class="dropdown__item">ТЦ «Метрополис», г.Москва, Ленинградское шоссе, 16а, стр.4, метро «Войковская»</div>
-                                    <div class="dropdown__item">ТРЦ «Ривьера», г.Москва, ул. Автозаводская, 18, метро «Тульская»,«Автозаводская»</div>
+                                    <div class="dropdown__item">ТРЦ «Ривьера», г.Москва, ул. Автозаводская, 18, метро «Тульская», «Автозаводская»</div>
                                     <div class="dropdown__item">ТРЦ «Саларис», г.Москва, 23 км Киевского шоссе, 1, метро: «Саларьево»</div>
                                     <div class="dropdown__item">ТРЦ Крокус Сити Молл, г.Москва, ул. Международная, 8, метро: «Мякинино»</div>
                                     <div class="dropdown__item">ТРК «Вегас» Каширское, г. Москва, 24 км МКАД</div>
                                 </div>
                             </div>
                         </div>
-                        <div class="input-wrapper">
+                        <div id="tickets-count" class="input-wrapper">
                             <div class="input-wrapper__label">
                                 Укажите количество билетов
                                 <span>Билет приобретается только на ребенка. Взрослые проходят бесплатно.</span>
@@ -80,7 +80,7 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="input-wrapper">
+                        <div id="fio" class="input-wrapper">
                             <div class="input-wrapper__label">Укажите ваши ФИО</div>
                             <input type="text">
                         </div>
@@ -88,7 +88,7 @@
                             <div class="input-wrapper__label">Укажите ваш телефон</div>
                             <input type="text">
                         </div>
-                        <div class="input-wrapper">
+                        <div id="email" class="input-wrapper">
                             <div class="input-wrapper__label">Укажите вашу электронную почту</div>
                             <input type="email">
                         </div>
@@ -103,26 +103,26 @@
                     <div class="order-form__title">Ваш заказ:</div>
                     <div class="order-form__item">
                         <div class="order-form__text">Билет в TeikaBoom:</div>
-                        <div class="order-form__content"></div>
+                        <div id="tickets-count-value" class="order-form__content"></div>
                         <div class="order-form__mesure">шт.</div>
                     </div>
                     <div class="order-form__item">
                         <div class="order-form__text">Парк</div>
-                        <div class="order-form__content"></div>
-                        <div class="order-form__mesure"></div>
+                        <div id="park-value" class="order-form__content"></div>
+                        <div id="park-measure" class="order-form__mesure"></div>
                     </div>
                     <div class="order-form__item">
                         <div class="order-form__text">Тариф</div>
-                        <div class="order-form__content"></div>
-                        <div class="order-form__mesure">р.</div>
+                        <div id="tariff-value" class="order-form__content"></div>
+                        <div id="tariff-measure" class="order-form__mesure">р.</div>
                     </div>
                     <div class="order-form__summary">
                         <div class="order-form__text">Итого к оплате:</div>
-                        <div class="order-form__content"></div>
+                        <div id="payment-total" class="order-form__content"></div>
                         <div class="order-form__mesure">р.</div>
                     </div>
-                    <button id="buy-ticket-btn" class="btn btn-primary order-form__btn">ОПЛАТИТЬ</button>
-                    <div class="order-form__confirm">
+                    <button id="buy-ticket-btn" class="btn btn-primary order-form__btn d-none">ОПЛАТИТЬ</button>
+                    <div class="order-form__confirm d-none">
                         Совершая покупку, я соглашаюсь с 
                         <a href="#" target="_blank">Политикой обработки <br> персональных данных</a>
                         и <a href="#" target="_blank">Правилами приобретения <br> и использования электронных билетов</a>.
@@ -288,15 +288,15 @@
                         <ul class="modal-check__list">
                             <li class="modal-check__item">
                                 <div class="modal-check__name">Билет в TeikaBoom: </div>
-                                <div class="modal-check__value">2 шт.</div>
+                                <div id="ticket-value-check" class="modal-check__value">2 шт.</div>
                             </li>
                             <li class="modal-check__item">
                                 <div class="modal-check__name">Парк:</div>
-                                <div class="modal-check__value">ТЦ «Метрополис», г.Москва, Ленинградское шоссе, 16а, стр.4, метро «Войковская»</div>
+                                <div id="park-value-check" class="modal-check__value">ТЦ «Метрополис», г.Москва, Ленинградское шоссе, 16а, стр.4, метро «Войковская»</div>
                             </li>
                             <li class="modal-check__item">
                                 <div class="modal-check__name">Тариф:</div>
-                                <div class="modal-check__value">1700 р. (Посещение парка в выходные и праздничные дни)</div>
+                                <div id="tariff-value-check" class="modal-check__value">1700 р. (Посещение парка в выходные и праздничные дни)</div>
                             </li>
                             <li class="modal-check__item">
                                 <div class="modal-check__name">Ваш телефон:</div>
@@ -317,7 +317,7 @@
                     <div class="modal-pay__content">
                         <div class="modal-pay__title">
                             Покупка билетов в TeikaBoom <br>
-                            <div class="modal-pay__sum">1700 р.</div>
+                            <div id="total-pay-summ" class="modal-pay__sum">1700 р.</div>
                         </div>
                         <div class="modal-pay__card">
                             <input type="text" placeholder="Номер карты">
