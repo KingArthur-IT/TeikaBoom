@@ -354,9 +354,9 @@ a.btn-primary {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: baseline;
-      -ms-flex-align: baseline;
-          align-items: baseline;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
@@ -366,6 +366,7 @@ a.btn-primary {
 .input-wrapper.promocode .input-wrapper__label {
   text-transform: uppercase;
   margin-right: 33px;
+  margin-bottom: 0;
 }
 
 .shevron {
