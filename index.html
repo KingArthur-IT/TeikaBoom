@@ -97,7 +97,7 @@
                             <input type="text">
                         </div>
                     </div>
-                    <div class="buy-section__detail">*Для некоторых категорий граждан действуют <strong>скидки</strong>.</div>
+                    <div id="open-info-modal" class="buy-section__detail">*Для некоторых категорий граждан действуют <strong>скидки</strong>.</div>
                 </div>
                 <div class="buy-section__order order-form">
                     <div class="order-form__title">Ваш заказ:</div>
@@ -207,6 +207,77 @@
                 </div>
             </form>
         </section>
+        <div id="modal-info" class="modal modal-info">
+            <div class="modal__container">
+                <div class="modal__hero modal-info__hero">
+                    <div class="modal-info__item">
+                        <div class="modal-info__img">
+                            <img src="./assets/modal-info/birth.svg" alt="birth">
+                        </div>
+                        <div class="modal-info__content">
+                            <div class="modal-info__title">
+                                Именинник ‒ <span>скидка</span>  
+                            </div>
+                            <ul class="modal-info__list">
+                                <li>Скидка 30% на входной билет полного дня (необходимо предъявить свидетельство о рождении)</li>
+                                <li>При внесении депозита для проведения праздника имениннику билет *бесплатно</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="modal-info__item">
+                        <div class="modal-info__img">
+                            <img src="./assets/modal-info/child.svg" alt="child">
+                        </div>
+                        <div class="modal-info__content">
+                            <div class="modal-info__title">
+                                Дети до 1 года ‒ <span>бесплатно</span>
+                            </div>
+                            <div class="modal-info__text">Вход для детей до года всегда бесплатно</div>
+                        </div> 
+                    </div>
+                    <div class="modal-info__item">
+                        <div class="modal-info__img">
+                            <img src="./assets/modal-info/help.svg" alt="help">
+                        </div>
+                        <div class="modal-info__content">
+                            <div class="modal-info__title">
+                                Дети с ограниченными возможностями ‒ <span>бесплатно</span>
+                            </div>
+                            <ul class="modal-info__list">
+                                <li>Для получения скидки необходимо предъявить оригинал справки.</li>
+                            </ul>
+                        </div> 
+                    </div>
+                    <div class="modal-info__item">
+                        <div class="modal-info__img">
+                            <img src="./assets/modal-info/children.svg" alt="children">
+                        </div>
+                        <div class="modal-info__content">
+                            <div class="modal-info__title">
+                                Многодетным семьям ‒ <span>скидка</span>
+                            </div>
+                            <div class="modal-info__text mb">
+                                Для многодетных семей скидка на входные билеты полного дня. <br>
+                                Понедельник - четверг:  <strong>750 руб.</strong>  Пятница - <strong>850 руб.</strong>  Выходные - <strong>1250 руб.</strong> (Москва)
+                            </div>
+                            <ul class="modal-info__list">
+                                <li>Для получения скидки необходимо предъявить оригинал свидетельсвтва.</li>
+                                <li>Не распространяется на бронирование столиков и комнат для праздников.</li>
+                            </ul>
+                        </div> 
+                    </div>
+                    <div class="modal-info__warning">
+                        <div class="modal-info__warning-icon">
+                            <img src="./assets/modal-info/Warning.svg" alt="warning">
+                        </div>
+                        <div class="modal-info__warning-text">
+                            Приобретение билета со скидкой возможно только при покупке
+                            билета на кассе и предоставления необходимых документов.
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
     </main>
     <script src="./script/main.js"></script>
 </body>
