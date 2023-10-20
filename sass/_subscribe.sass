@@ -2,12 +2,13 @@
     &__form
         padding: 45px
         box-shadow: 0px 10px 70px 0px rgba(0, 0, 0, 0.10)
+        border-radius: 40px
     &__title
         color: #8981BD
         font-size: 21px
         margin-bottom: 16px
         text-align: center
-        font-weight: 600
+        font-weight: 700
     &__subtitle
         font-size: 16px
         margin-bottom: 40px
@@ -39,3 +40,43 @@
             color: #000
             font-weight: 700
             text-decoration: underline
+
+@media screen and (max-width: 1024px)
+    .subscribe
+        &__hero
+            flex-direction: column
+            max-width: 500px
+        &__input
+            flex-basis: 100%
+            & input
+                padding: 10px 40px
+
+@media screen and (max-width: 600px)
+    .subscribe
+        &__form
+            padding: 30px 40px
+        &__subtitle
+            margin-bottom: 25px
+        &__hero
+            gap: 20px
+        &__btn
+            flex-basis: 100%
+        &__input
+            flex-basis: 100%
+            & input
+                padding: 16px 40px
+
+@media screen and (max-width: 425px)
+    .subscribe
+        &__title
+            font-size: 16px
+            margin-bottom: 13px
+        &__subtitle
+            font-size: 14px
+        &__hero
+            gap: 15px
+            margin-bottom: 26px
+        &__input
+            & input
+                padding: 10px 40px
+                font-size: 12px

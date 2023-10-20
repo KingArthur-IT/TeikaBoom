@@ -14,7 +14,7 @@
     &::after
         content: ''
         position: absolute
-        right: -30px
+        right: 0px
         top: -60px
         width: 112px
         height: 108px
@@ -22,6 +22,8 @@
         background-size: cover
         transform: rotate(42deg)
     & .title
+        max-width: 930px
+        margin: 0 auto
         margin-bottom: 200px
         & span
             color: #88BDD0
@@ -58,3 +60,70 @@
     &__details
         font-size: 12px
         text-align: center
+
+@media screen and (max-width: 1200px)
+    .relax
+        &::before
+            right: 10%
+            top: -240px
+        &::after
+            right: -30px
+            top: -150px
+
+@media screen and (max-width: 1024px)
+    .relax
+        & .title
+            margin-bottom: 90px
+        &__subtitle
+            font-size: 20px
+            margin-bottom: 30px
+        &__hero
+            margin-bottom: 48px
+        &__text
+            padding: 0 10px
+            font-size: 16px
+        &__img
+            margin-bottom: 20px
+
+@media screen and (max-width: 860px)
+    .relax
+        &::before
+            display: none
+        &::after
+            display: none
+
+@media screen and (max-width: 768px)
+    .relax
+        &__hero
+            flex-direction: column
+            align-items: center
+            gap: 48px
+        &__item
+            flex-basis: 100%
+        &__img
+            margin: 0 auto
+            margin-bottom: 22px
+        &__text
+            text-align: center
+            max-width: 320px
+            margin: 0 auto
+        &__info
+            max-width: 400px
+            margin: 0 auto
+            margin-bottom: 8px
+        &__details
+            max-width: 320px
+            margin: 0 auto
+
+@media screen and (max-width: 600px)
+    .relax
+        margin-bottom: 100px
+        & .title
+            margin-bottom: 50px
+
+@media screen and (max-width: 425px)
+    .relax
+        &__subtitle
+            font-size: 16px
+        &__info
+            font-size: 14px

@@ -32,6 +32,8 @@
         box-shadow: 0px 10px 60px 0px rgba(0, 0, 0, 0.10)
         padding: 40px 40px 50px
         background: #fff
+        display: flex
+        flex-direction: column
     &__img
         width: 100%
         margin-bottom: 55px
@@ -45,12 +47,14 @@
         font-size: 21px
         text-align: center
         margin-bottom: 33px
+        font-weight: 600
     &__text
         font-size: 20px
         margin-bottom: 33px
     &__btn
         width: 178px
         margin: 0 auto
+        margin-top: auto
 
 .special-gift
     position: relative
@@ -66,3 +70,50 @@
         transform: rotate(34deg) translate(60%, -20%)
         filter: blur(50px)
         z-index: -1
+
+@media screen and (max-width: 1024px)
+    .special
+        & .title
+            margin-bottom: 90px
+
+@media screen and (max-width: 860px)
+    .special        
+        &__hero
+            flex-direction: column
+            align-items: center
+
+@media screen and (max-width: 600px)
+    .special
+        margin-bottom: 100px
+        &::before
+            display: none
+        & .title
+            margin-bottom: 50px
+        &__card
+            padding: 35px 35px 45px
+        &__img
+            margin-bottom: 30px
+        &__title
+            margin-bottom: 25px
+        &__text
+            font-size: 16px
+            margin-bottom: 23px
+            text-align: center
+
+
+@media screen and (max-width: 425px)
+    .special
+        margin-bottom: 60px
+        &__card
+            padding: 25px 25px 35px
+        &__img
+            margin-bottom: 20px
+        &__title
+            font-size: 18px
+            margin-bottom: 20px
+        &__text
+            font-size: 14px
+            margin-bottom: 23px
+            text-align: center
+        &__btn
+            width: 160px
