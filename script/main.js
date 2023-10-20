@@ -24,12 +24,27 @@ document.querySelector('#buy-ticket-btn').addEventListener('click', () => {
     document.querySelector('#modal-check').classList.add('show');
 })
 
+//open pay modal
+document.querySelector('#payment-btn').addEventListener('click', () => {
+    document.querySelector('#modal-check').classList.remove('show');
+    document.querySelector('#modal-pay').classList.add('show');
+})
+
+//open contacts modal
+document.querySelectorAll('.open-contacts-modal').forEach(el => {
+    el.addEventListener('click', () => {
+        document.querySelector('#modal-contact').classList.add('show');
+    })
+})
+
+
+
 //close modals
 document.querySelectorAll('.modal').forEach(el => {
     el.addEventListener('click', () => {
         el.classList.remove('show');
     })
 })
-document.querySelectorAll('.modal__container').forEach(el => {
+document.querySelectorAll('.modal__hero').forEach(el => {
     el.addEventListener('click', (e) => e.stopPropagation());
 })

@@ -176,7 +176,7 @@
                         </div>
                         <div class="special__title">Корпоративные билеты</div>
                         <div class="special__text">Специальное предложение для компаний, поддерживающих семейные ценности.</div>
-                        <button class="btn btn-primary special__btn">ПОДРОБНЕЕ</button>
+                        <button class="btn btn-primary special__btn open-contacts-modal">ПОДРОБНЕЕ</button>
                     </div>
                     <div class="special__card special-gift">
                         <div class="special__img">
@@ -184,7 +184,7 @@
                         </div>
                         <div class="special__title">Подарочные сертификаты</div>
                         <div class="special__text">Лучший подарок для родителей активных деток.</div>
-                        <button class="btn btn-primary special__btn">ПОДРОБНЕЕ</button>
+                        <button class="btn btn-primary special__btn open-contacts-modal">ПОДРОБНЕЕ</button>
                     </div>
                 </div>
             </div>
@@ -305,13 +305,13 @@
                         </ul>
                         <div class="modal-check__btns">
                             <button class="btn modal-check__cancel"><span>ОТМЕНА</span></button>
-                            <button class="btn btn-primary modal-check__pay">ОПЛАТИТЬ</button>
+                            <button id="payment-btn" class="btn btn-primary modal-check__pay">ОПЛАТИТЬ</button>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-        <div id="modal-pay" class="modal modal-pay show">
+        <div id="modal-pay" class="modal modal-pay">
             <div class="modal__container">
                 <div class="modal__hero modal-pay__hero">
                     <div class="modal-pay__content">
@@ -360,6 +360,34 @@
                                     <img src="./assets/pay/pay.png" alt="pay">
                                 </div>
                             </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="modal-contact" class="modal modal-contact">
+            <div class="modal__container">
+                <div class="modal__hero modal-contact__hero">
+                    <div class="modal-contact__content">
+                        <div class="modal-contact__title">
+                            Оставьте свой телефон и наш менеджер свяжется 
+                            с вами, чтобы рассказать специальные условия 
+                            для корпоративных клиентов
+                        </div>
+                        <div class="modal-contact__info">
+                            <div class="modal-contact__controls">
+                                <div class="modal-contact__phone">
+                                    <input type="text" placeholder="+7 (___) ____">
+                                </div>
+                                <div class="modal-contact__check">
+                                    <input type="checkbox">
+                                    <div>Согласие на обработку персональных данных</div>
+                                </div>
+                                <button class="btn btn-primary modal-contact__btn">ЗАБРОНИРОВАТЬ</button>
+                            </div>
+                            <div class="modal-contact__logo">
+                                <img src="./assets/logo.png" alt="TeikaBoom">
+                            </div>
                         </div>
                     </div>
                 </div>

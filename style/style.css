@@ -1926,6 +1926,151 @@ a.btn-primary {
   }
 }
 
+.modal-contact__hero {
+  background: linear-gradient(124deg, #948ECE 5.33%, #948ECE 5.34%, #948ECE 67.13%);
+  border-radius: 40px;
+  overflow-y: auto;
+  width: 100%;
+  height: 100%;
+  padding: 60px 80px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.modal-contact__title {
+  color: #FFF;
+  text-align: center;
+  font-family: 'Days One', sans-serif;
+  font-size: 28px;
+  margin-bottom: 80px;
+  font-weight: 600;
+}
+
+.modal-contact__info {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  gap: 40px;
+}
+
+.modal-contact__phone {
+  margin-bottom: 13px;
+  width: 100%;
+  height: 55px;
+}
+
+.modal-contact__phone input {
+  width: 100%;
+  height: 100%;
+  padding: 16px 50px;
+  font-size: 14px;
+  border-radius: 100px;
+  outline: none;
+  border: none;
+}
+
+.modal-contact__phone input::-webkit-input-placeholder {
+  color: #767676;
+  font-size: 14px;
+  font-weight: 700;
+  letter-spacing: 0.98px;
+  -webkit-transform: translateY(2px);
+          transform: translateY(2px);
+}
+
+.modal-contact__phone input:-ms-input-placeholder {
+  color: #767676;
+  font-size: 14px;
+  font-weight: 700;
+  letter-spacing: 0.98px;
+  transform: translateY(2px);
+}
+
+.modal-contact__phone input::-ms-input-placeholder {
+  color: #767676;
+  font-size: 14px;
+  font-weight: 700;
+  letter-spacing: 0.98px;
+  transform: translateY(2px);
+}
+
+.modal-contact__phone input::placeholder {
+  color: #767676;
+  font-size: 14px;
+  font-weight: 700;
+  letter-spacing: 0.98px;
+  -webkit-transform: translateY(2px);
+          transform: translateY(2px);
+}
+
+.modal-contact__check {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 8px;
+  padding: 0 50px;
+  margin-bottom: 35px;
+  color: #fff;
+  font-size: 14px;
+}
+
+.modal-contact__btn {
+  width: 100%;
+}
+
+@media screen and (max-width: 1050px) {
+  .modal-contact__title {
+    font-size: 24px;
+  }
+  .modal-contact__phone input {
+    padding: 16px 30px;
+  }
+  .modal-contact__check {
+    padding: 0 30px;
+  }
+}
+
+@media screen and (max-width: 940px) {
+  .modal-contact__info {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .modal-contact__logo {
+    margin-bottom: 40px;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .modal-contact__hero {
+    padding: 40px;
+  }
+  .modal-contact__title {
+    font-size: 22px;
+    margin-bottom: 40px;
+  }
+}
+
+@media screen and (max-width: 425px) {
+  .modal-contact__logo {
+    width: 100%;
+  }
+  .modal-contact__logo img {
+    width: 100%;
+  }
+}
+
 .main {
   padding-top: 140px;
   padding-bottom: 140px;

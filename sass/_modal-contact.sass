@@ -1,0 +1,81 @@
+.modal-contact
+    &__hero
+        background: linear-gradient(124deg, #948ECE 5.33%, #948ECE 5.34%, #948ECE 67.13%)
+        border-radius: 40px
+        overflow-y: auto
+        width: 100%
+        height: 100%
+        padding: 60px 80px
+        display: flex
+        justify-content: center
+    &__title
+        color: #FFF
+        text-align: center
+        font-family: 'Days One', sans-serif
+        font-size: 28px
+        margin-bottom: 80px
+        font-weight: 600
+    &__info
+        display: flex
+        align-items: center
+        justify-content: space-between
+        gap: 40px
+    &__phone
+        margin-bottom: 13px
+        width: 100%
+        height: 55px
+        & input
+            width: 100%
+            height: 100%
+            padding: 16px 50px
+            font-size: 14px
+            border-radius: 100px
+            outline: none
+            border: none
+            &::placeholder
+                color: #767676
+                font-size: 14px
+                font-weight: 700
+                letter-spacing: 0.98px
+                transform: translateY(2px)
+    &__check
+        display: flex
+        gap: 8px
+        padding: 0 50px
+        margin-bottom: 35px
+        color: #fff
+        font-size: 14px
+    &__btn
+        width: 100%
+
+@media screen and (max-width: 1050px)
+    .modal-contact
+        &__title
+            font-size: 24px
+        &__phone
+            & input
+                padding: 16px 30px
+        &__check
+            padding: 0 30px
+
+@media screen and (max-width: 940px)
+    .modal-contact
+        &__info
+            flex-direction: column
+        &__logo
+            margin-bottom: 40px
+
+@media screen and (max-width: 600px)
+    .modal-contact
+        &__hero
+            padding: 40px
+        &__title
+            font-size: 22px
+            margin-bottom: 40px
+
+@media screen and (max-width: 425px)
+    .modal-contact
+        &__logo
+            width: 100%
+            & img
+                width: 100%
