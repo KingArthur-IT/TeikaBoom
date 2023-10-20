@@ -1,0 +1,160 @@
+.modal-check
+    &__hero
+        border-radius: 40px
+        background: #FFF
+        padding: 64px
+        overflow: hidden
+        position: relative
+        width: 100%
+        min-height: 100%
+        display: flex
+        align-items: center
+        position: relative
+        &::before
+            content: ''
+            position: absolute
+            bottom: -10px
+            right: 10%
+            background: url('../assets/boxes/violet.png') no-repeat
+            background-size: cover
+            width: 112px
+            height: 110px
+            transform: rotate(41deg)
+        &::after
+            content: ''
+            position: absolute
+            top: -30px
+            left: 40%
+            background: url('../assets/boxes/pink.png') no-repeat
+            background-size: cover
+            width: 73px
+            height: 70px
+            transform: rotate(-21deg)
+    &__title
+        font-family: 'Days One', sans-serif
+        font-size: 26px
+        margin-bottom: 48px
+        font-weight: 600
+        & span
+            color: #9088C1
+    &__list
+        list-style: none
+        margin-bottom: 48px
+    &__item
+        display: flex
+        margin-bottom: 24px
+        font-size: 20px
+        gap: 32px
+    &__name
+        min-width: 192px
+    &__value
+        font-weight: 600
+    &__btns
+        display: flex
+        gap: 23px
+        height: 55px
+    &__cancel
+        min-width: 280px
+        border-radius: 100px
+        font-size: 14px
+        font-weight: 700
+        text-transform: uppercase
+        padding: 18px
+        letter-spacing: 0.98px
+        overflow: hidden
+        & span
+            z-index: 1
+        &::before
+            content: ''
+            position: absolute
+            left: 0
+            right: 0
+            top: 0
+            bottom: 0
+            background: linear-gradient(90deg, #FFCF00 0%, #FFEB01 105.54%)
+            border-radius: 100px
+            opacity: 0
+            transition: opacity .5s ease
+            z-index: 0
+        &:hover::before
+            opacity: 1
+    &__pay
+        min-width: 280px
+
+@media screen and (max-width: 1024px)
+    .modal-check
+        &__hero
+            &::after
+                top: -30px
+                left: 25%
+                width: 63px
+                height: 60px
+            &::before
+                bottom: -30px
+                right: 10%
+                width: 82px
+                height: 80px
+        &__title
+            font-size: 22px
+            margin-bottom: 36px
+        &__list
+            margin-bottom: 36px
+        &__item
+            margin-bottom: 18px
+            font-size: 18px
+            gap: 28px
+        &__name
+            min-width: 180px
+        &__btns
+            gap: 20px
+            height: 48px
+
+@media screen and (max-width: 768px)
+    .modal-check
+        &__hero
+            padding: 40px 50px
+            &::after
+                top: -20px
+                left: 20%
+                width: 43px
+                height: 40px
+            &::before
+                bottom: -30px
+                right: 10%
+                width: 62px
+                height: 60px
+        &__item
+            display: flex
+            flex-direction: column
+            justify-content: flex-start
+            gap: 2px
+        &__name
+            font-weight: 600
+            color: #9088C1
+        &__pay
+            min-width: auto
+            width: 100%
+        &__cancel
+            min-width: auto
+            width: 100%
+
+@media screen and (max-width: 600px)
+    .modal-check
+        &__hero
+            padding: 40px 30px
+        &__btns
+            flex-direction: column
+            margin-bottom: 30px
+            height: auto
+        &__cancel
+            height: 44px
+
+@media screen and (max-width: 425px)
+    .modal-check
+        &__title
+            font-size: 18px
+            margin-bottom: 22px
+        &__item
+            font-size: 16px
+        &__btns
+            gap: 12px

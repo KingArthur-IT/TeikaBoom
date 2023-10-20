@@ -121,7 +121,7 @@
                         <div class="order-form__content"></div>
                         <div class="order-form__mesure">р.</div>
                     </div>
-                    <button class="btn btn-primary order-form__btn">ОПЛАТИТЬ</button>
+                    <button id="buy-ticket-btn" class="btn btn-primary order-form__btn">ОПЛАТИТЬ</button>
                     <div class="order-form__confirm">
                         Совершая покупку, я соглашаюсь с 
                         <a href="#" target="_blank">Политикой обработки <br> персональных данных</a>
@@ -273,6 +273,39 @@
                         <div class="modal-info__warning-text">
                             Приобретение билета со скидкой возможно только при покупке
                             билета на кассе и предоставления необходимых документов.
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="modal-check" class="modal modal-check">
+            <div class="modal__container">
+                <div class="modal__hero modal-check__hero">
+                    <div class="modal-check__content">
+                        <div class="modal-check__title">
+                            Проверьте <span>корректность</span> введенных данных:
+                        </div>
+                        <ul class="modal-check__list">
+                            <li class="modal-check__item">
+                                <div class="modal-check__name">Билет в TeikaBoom: </div>
+                                <div class="modal-check__value">2 шт.</div>
+                            </li>
+                            <li class="modal-check__item">
+                                <div class="modal-check__name">Парк:</div>
+                                <div class="modal-check__value">ТЦ «Метрополис», г.Москва, Ленинградское шоссе, 16а, стр.4, метро «Войковская»</div>
+                            </li>
+                            <li class="modal-check__item">
+                                <div class="modal-check__name">Тариф:</div>
+                                <div class="modal-check__value">1700 р. (Посещение парка в выходные и праздничные дни)</div>
+                            </li>
+                            <li class="modal-check__item">
+                                <div class="modal-check__name">Ваш телефон:</div>
+                                <div class="modal-check__value">+7 (999) 999-99-99</div>
+                            </li>
+                        </ul>
+                        <div class="modal-check__btns">
+                            <button class="btn modal-check__cancel"><span>ОТМЕНА</span></button>
+                            <button class="btn btn-primary modal-check__pay">ОПЛАТИТЬ</button>
                         </div>
                     </div>
                 </div>

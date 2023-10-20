@@ -1,3 +1,4 @@
+//dropdowns
 const dropdownsArr = ['park', 'tariff']
 
 dropdownsArr.forEach(el => {
@@ -13,11 +14,17 @@ dropdownsArr.forEach(el => {
     
 })
 
+//open info modal
 document.querySelector('#open-info-modal').addEventListener('click', () => {
     document.querySelector('#modal-info').classList.add('show');
 })
 
-//close modal
+//open buy ticket modal
+document.querySelector('#buy-ticket-btn').addEventListener('click', () => {
+    document.querySelector('#modal-check').classList.add('show');
+})
+
+//close modals
 document.querySelectorAll('.modal').forEach(el => {
     el.addEventListener('click', () => {
         el.classList.remove('show');
