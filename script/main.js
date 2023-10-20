@@ -55,6 +55,7 @@ document.querySelector('#buy-ticket-btn').addEventListener('click', () => {
 
     if (isAllFields){
         document.querySelector('#modal-check').classList.add('show');
+        document.querySelector('body').classList.add('no-scroll');
     }
 })
 
@@ -62,12 +63,14 @@ document.querySelector('#buy-ticket-btn').addEventListener('click', () => {
 document.querySelector('#payment-btn').addEventListener('click', () => {
     document.querySelector('#modal-check').classList.remove('show');
     document.querySelector('#modal-pay').classList.add('show');
+    document.querySelector('body').classList.add('no-scroll');
 })
 
 //open contacts modal
 document.querySelectorAll('.open-contacts-modal').forEach(el => {
     el.addEventListener('click', () => {
         document.querySelector('#modal-contact').classList.add('show');
+        document.querySelector('body').classList.add('no-scroll');
     })
 })
 
@@ -76,6 +79,7 @@ document.querySelectorAll('.open-contacts-modal').forEach(el => {
 document.querySelectorAll('.modal').forEach(el => {
     el.addEventListener('click', () => {
         el.classList.remove('show');
+        document.querySelector('body').classList.remove('no-scroll');
     })
 })
 document.querySelectorAll('.modal__hero').forEach(el => {
