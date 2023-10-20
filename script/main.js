@@ -31,8 +31,12 @@ document.querySelector('#buy-ticket-btn').addEventListener('click', () => {
     const emailWrapper = document.querySelector('#email');
     const emailValue = emailWrapper.querySelector('input').value;
 
+    const phoneWrapper = document.querySelector('#phone');
+    const phoneValue = phoneWrapper.querySelector('input').value;
+
     fioWrapper.querySelector('.input-wrapper__label').classList.remove('invalid');
     emailWrapper.querySelector('.input-wrapper__label').classList.remove('invalid');
+    phoneWrapper.querySelector('.input-wrapper__label').classList.remove('invalid');
 
     let isAllFields = true;
 
@@ -42,6 +46,10 @@ document.querySelector('#buy-ticket-btn').addEventListener('click', () => {
     }
     if (!validateEmail(emailValue)){
         emailWrapper.querySelector('.input-wrapper__label').classList.add('invalid');
+        isAllFields = false;
+    }
+    if (phoneValue.length !== 16){
+        phoneWrapper.querySelector('.input-wrapper__label').classList.add('invalid');
         isAllFields = false;
     }
 
@@ -62,7 +70,6 @@ document.querySelectorAll('.open-contacts-modal').forEach(el => {
         document.querySelector('#modal-contact').classList.add('show');
     })
 })
-
 
 
 //close modals
@@ -93,6 +100,13 @@ ticketsCountInput.addEventListener('input', () => {
     }
 })
 
+//phone
+const phoneInput = document.querySelector('#phone input');
+phoneInput.addEventListener('input', () => {
+    phoneInput.value = phoneMask(phoneInput.value);
+    document.querySelector('#phone-value-check').innerHTML = phoneInput.value;
+})
+
 function calculateSumm(){
     const count = document.querySelector('#tickets-count input').value;
     const tariffHtml = document.querySelector('#tariff-value').innerHTML;
@@ -114,6 +128,7 @@ function calculateSumm(){
         document.querySelector('#buy-ticket-btn').classList.remove('d-none');
         document.querySelector('.order-form__confirm').classList.remove('d-none');
         document.querySelector('#total-pay-summ').innerHTML = tariff * count + 'р.';
+        document.querySelector('#total-pay-summ-btn span').innerHTML = tariff * count;
     } else {
         document.querySelector('#payment-total').innerHTML = '';
         document.querySelector('#payment-total').classList.remove('filled');
@@ -125,4 +140,59 @@ function calculateSumm(){
 function validateEmail(email) {
     const emailRegex = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$/;
     return emailRegex.test(email);
-  }
+}
+
+function phoneMask(phone) {
+    return '+7' + phone
+            .replace('+7', '')
+            .replace(/\D/g, '')
+            .replace(/^(\d)/, '($1')
+            .replace(/^(\(\d{3})(\d)/, '$1) $2')
+            .replace(/(\d{3})(\d{1,5})/, '$1-$2')
+            .replace(/(-\d{4})\d+?$/, '$1');
+}
+
+
+//payment modal
+const cardNumInput = document.querySelector('#card-num');
+const cardDateInput = document.querySelector('#card-date');
+const cardCvvInput = document.querySelector('#card-cvv');
+
+cardNumInput.addEventListener('input', () => {
+    cardNumInput.value = formatCreditCardNumber(cardNumInput.value);
+})
+cardDateInput.addEventListener('input', () => {
+    cardDateInput.value = formatExpiryDate(cardDateInput.value);
+})
+cardCvvInput.addEventListener('input', () => {
+    cardCvvInput.value = formatCvvCode(cardCvvInput.value);
+})
+
+function formatCreditCardNumber(cardNumber) {
+    return cardNumber
+        .replace(/\D/g, '') // Удаляем все символы, кроме цифр
+        .replace(/(\d{4})/g, '$1 ') // Разбиваем на группы по 4 цифры
+        .slice(0, 19)
+}
+
+function formatExpiryDate(dateValue) {
+    const input = dateValue.replace(/\D/g, ""); // Удаляем все символы, кроме цифр
+    let formattedValue = "";
+
+    if (input.length > 0) {
+        const month = input.slice(0, 2); // Получаем первые две цифры (месяц)
+        if (month <= 12){
+            formattedValue = month; 
+        } else return formattedValue;
+
+        if (input.length > 2) {
+            formattedValue += "/" + input.slice(2, 4); // Добавляем разделитель и следующие две цифры (год)
+        }
+    }
+
+    return formattedValue;
+}
+
+function formatCvvCode(value){
+    return value.replace(/\D/g, '').slice(0, 3)
+}
