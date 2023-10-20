@@ -1267,6 +1267,15 @@ a.btn-primary {
   border-radius: 40px;
   width: 100%;
   height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
 @media screen and (max-width: 768px) {
@@ -1740,6 +1749,180 @@ a.btn-primary {
   }
   .modal-check__btns {
     gap: 12px;
+  }
+}
+
+.modal-pay__hero {
+  border-radius: 40px;
+  background: #FFF;
+  overflow-y: auto;
+  position: relative;
+  max-width: 600px;
+  padding: 60px 80px;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.modal-pay__title {
+  font-size: 26px;
+  font-weight: 700;
+  margin-bottom: 70px;
+  text-align: center;
+}
+
+.modal-pay__sum {
+  color: #8981BD;
+}
+
+.modal-pay__btns {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 18px;
+  padding-bottom: 40px;
+}
+
+.modal-pay__pay {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  height: 55px;
+}
+
+.modal-pay__pay span {
+  padding: 0 5px;
+}
+
+.modal-pay__pay .tinkoff {
+  margin-right: 6px;
+}
+
+.modal-pay__pay .yandex-pay {
+  margin-left: 6px;
+}
+
+.modal-pay__card {
+  width: 100%;
+  margin-bottom: 18px;
+}
+
+.modal-pay__card input {
+  width: 100%;
+  padding: 15px 48px;
+  border-radius: 100px;
+  border: none;
+  outline: none;
+  border: 1px solid #747373;
+  font-size: 16px;
+}
+
+.modal-pay__card input::-webkit-input-placeholder {
+  color: #747373;
+  font-size: 16px;
+  letter-spacing: 1.12px;
+  -webkit-transform: translateY(2px);
+          transform: translateY(2px);
+}
+
+.modal-pay__card input:-ms-input-placeholder {
+  color: #747373;
+  font-size: 16px;
+  letter-spacing: 1.12px;
+  transform: translateY(2px);
+}
+
+.modal-pay__card input::-ms-input-placeholder {
+  color: #747373;
+  font-size: 16px;
+  letter-spacing: 1.12px;
+  transform: translateY(2px);
+}
+
+.modal-pay__card input::placeholder {
+  color: #747373;
+  font-size: 16px;
+  letter-spacing: 1.12px;
+  -webkit-transform: translateY(2px);
+          transform: translateY(2px);
+}
+
+.modal-pay__card-info {
+  width: 100%;
+  margin-bottom: 21px;
+  border: 1px solid #747373;
+  border-radius: 100px;
+  height: 55px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  overflow: hidden;
+}
+
+.modal-pay__card-info input {
+  height: 100%;
+  padding: 0 20px 0 48px;
+  border: none;
+  outline: none;
+  max-width: 160px;
+}
+
+.modal-pay__recept {
+  margin-bottom: 40px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-size: 14px;
+}
+
+.modal-pay__recept input {
+  margin-right: 12px;
+}
+
+@media screen and (max-width: 600px) {
+  .modal-pay__hero {
+    padding: 40px;
+  }
+  .modal-pay__title {
+    margin-bottom: 40px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .modal-pay__title {
+    font-size: 22px;
+  }
+  .modal-pay__card-info {
+    height: 44px;
+  }
+  .modal-pay__card-info input {
+    padding: 0 20px 0 48px;
+    max-width: 130px;
+  }
+  .modal-pay__card-info .cvv-icon {
+    margin-left: auto;
+    margin-right: 20px;
   }
 }
 

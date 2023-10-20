@@ -1,0 +1,95 @@
+.modal-pay
+    &__hero
+        border-radius: 40px
+        background: #FFF
+        overflow-y: auto
+        position: relative
+        max-width: 600px
+        padding: 60px 80px
+        height: 100%
+        display: flex
+        justify-content: center
+    &__content
+    &__title
+        font-size: 26px
+        font-weight: 700
+        margin-bottom: 70px
+        text-align: center
+    &__sum
+        color: #8981BD
+    &__btns
+        display: flex
+        flex-direction: column
+        gap: 18px
+        padding-bottom: 40px
+    &__pay
+        width: 100%
+        display: flex
+        align-items: center
+        justify-content: center
+        height: 55px
+        & span
+            padding: 0 5px
+        & .tinkoff
+            margin-right: 6px
+        & .tinkoff-pay
+        & .yandex-pay
+            margin-left: 6px
+    &__card
+        width: 100%
+        margin-bottom: 18px
+        & input
+            width: 100%
+            padding: 15px 48px
+            border-radius: 100px
+            border: none
+            outline: none
+            border: 1px solid #747373
+            font-size: 16px
+            &::placeholder
+                color: #747373
+                font-size: 16px
+                letter-spacing: 1.12px
+                transform: translateY(2px)
+    &__card-info
+        width: 100%
+        margin-bottom: 21px
+        border: 1px solid #747373
+        border-radius: 100px
+        height: 55px
+        display: flex
+        align-items: center
+        overflow: hidden
+        & input
+            height: 100%
+            padding: 0 20px 0 48px
+            border: none
+            outline: none
+            max-width: 160px
+    &__recept
+        margin-bottom: 40px
+        display: flex
+        align-items: center
+        font-size: 14px
+        & input
+            margin-right: 12px
+
+@media screen and (max-width: 600px)
+    .modal-pay
+        &__hero
+            padding: 40px
+        &__title
+            margin-bottom: 40px
+
+@media screen and (max-width: 480px)
+    .modal-pay
+        &__title
+            font-size: 22px
+        &__card-info
+            height: 44px
+            & input
+                padding: 0 20px 0 48px
+                max-width: 130px
+            & .cvv-icon
+                margin-left: auto
+                margin-right: 20px
