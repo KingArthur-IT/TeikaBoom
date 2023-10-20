@@ -196,3 +196,40 @@ function formatExpiryDate(dateValue) {
 function formatCvvCode(value){
     return value.replace(/\D/g, '').slice(0, 3)
 }
+
+//contact modal
+const contactPhoneInput = document.querySelector('#contact-phone');
+const contactCheckbox = document.querySelector('#contact-confirm');
+
+contactPhoneInput.addEventListener('input', () => {
+    contactPhoneInput.value = phoneMask(contactPhoneInput.value);
+})
+
+document.querySelector('#booking-btn').addEventListener('click', () => {
+    contactPhoneInput.classList.remove('invalid');
+    document.querySelector('#contact-confirm-text').classList.remove('invalid');
+
+    if (contactPhoneInput.value.length !== 16){
+        contactPhoneInput.classList.add('invalid');
+    }
+    if(!contactCheckbox.checked){
+        document.querySelector('#contact-confirm-text').classList.add('invalid');
+    }
+})
+
+//sunscribe section
+document.querySelector('#subscribe-btn').addEventListener('click', () => {
+    const subsribeName = document.querySelector('#subscribe-name');
+    const subsribeEmail = document.querySelector('#subscribe-email');
+
+    subsribeName.classList.remove('invalid');
+    subsribeEmail.classList.remove('invalid');
+
+    if (subsribeName.value.length < 8){
+        subsribeName.classList.add('invalid');
+    }
+    if (!validateEmail(subsribeEmail.value)){
+        subsribeEmail.classList.add('invalid');
+    }
+})
+id="subscribe-email"

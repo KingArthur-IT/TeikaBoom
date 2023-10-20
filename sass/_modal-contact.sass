@@ -39,6 +39,8 @@
                 font-weight: 700
                 letter-spacing: 0.98px
                 transform: translateY(2px)
+            &.invalid
+                border: 1px solid red
     &__check
         display: flex
         gap: 8px
@@ -48,6 +50,9 @@
         font-size: 14px
     &__btn
         width: 100%
+
+#contact-confirm-text.invalid
+    color: red
 
 @media screen and (max-width: 1050px)
     .modal-contact

@@ -190,22 +190,22 @@
             </div>
         </section>
         <section class="section subscribe">
-            <form class="subscribe__form">
+            <div class="subscribe__form">
                 <div class="subscribe__title">Подписка на новости и специальные предложения!</div>
                 <div class="subscribe__subtitle">Сообщим о новостях парка и позовем на лучшие мероприятия!</div>
                 <div class="subscribe__hero">
                     <div class="subscribe__input">
-                        <input type="text" placeholder="Ваше имя">
+                        <input id="subscribe-name" type="text" placeholder="Ваше имя">
                     </div>
                     <div class="subscribe__input">
-                        <input type="email" placeholder="Ваш e-mail">
+                        <input id="subscribe-email" type="email" placeholder="Ваш e-mail">
                     </div>
-                    <button class="btn btn-primary subscribe__btn">ПОДПИСАТЬСЯ</button>
+                    <button id="subscribe-btn" class="btn btn-primary subscribe__btn">ПОДПИСАТЬСЯ</button>
                 </div>
                 <div class="subscribe__confirm">
                     Согласие на <a href="#" target="_blank">обработку</a> персональных данных
                 </div>
-            </form>
+            </div>
         </section>
         <div id="modal-info" class="modal modal-info">
             <div class="modal__container">
@@ -377,13 +377,13 @@
                         <div class="modal-contact__info">
                             <div class="modal-contact__controls">
                                 <div class="modal-contact__phone">
-                                    <input type="text" placeholder="+7 (___) ____">
+                                    <input id="contact-phone" type="text" placeholder="+7 (___) ____">
                                 </div>
                                 <div class="modal-contact__check">
-                                    <input type="checkbox">
-                                    <div>Согласие на обработку персональных данных</div>
+                                    <input id="contact-confirm" type="checkbox">
+                                    <div id="contact-confirm-text">Согласие на обработку персональных данных</div>
                                 </div>
-                                <button class="btn btn-primary modal-contact__btn">ЗАБРОНИРОВАТЬ</button>
+                                <button id="booking-btn" class="btn btn-primary modal-contact__btn">ЗАБРОНИРОВАТЬ</button>
                             </div>
                             <div class="modal-contact__logo">
                                 <img src="./assets/logo.png" alt="TeikaBoom">

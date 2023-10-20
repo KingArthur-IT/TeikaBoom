@@ -1171,6 +1171,10 @@ a.btn-primary {
   outline: none;
 }
 
+.subscribe__input input.invalid {
+  border: 1px solid red;
+}
+
 .subscribe__btn {
   -ms-flex-preferred-size: 33.33%;
       flex-basis: 33.33%;
@@ -2032,6 +2036,10 @@ a.btn-primary {
           transform: translateY(2px);
 }
 
+.modal-contact__phone input.invalid {
+  border: 1px solid red;
+}
+
 .modal-contact__check {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -2045,6 +2053,10 @@ a.btn-primary {
 
 .modal-contact__btn {
   width: 100%;
+}
+
+#contact-confirm-text.invalid {
+  color: red;
 }
 
 @media screen and (max-width: 1050px) {
